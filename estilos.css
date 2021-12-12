@@ -310,70 +310,43 @@ main img{
     background-color: #eee;
     padding: 10px 35px;
 }
-#aro_card_01:hover{
-    color: #eee;
-    background-color: black;
-}
 #aro_card_02{
     grid-area: aro_card_02;
     background-color: #eee;
     padding: 10px 35px;
-}
-#aro_card_02:hover{
-    color: #eee;
-    background-color: black;
 }
 #aro_card_03{
     grid-area: aro_card_03;
     background-color: #eee;
     padding: 10px 35px;
 }
-#aro_card_03:hover{
-    color: #eee;
-    background-color: black;
-}
 #aro_card_04{
     grid-area: aro_card_04;
     background-color: #eee;
     padding: 10px 35px;
-}
-#aro_card_04:hover{
-    color: #eee;
-    background-color: black;
 }
 #aro_card_05{
     grid-area: aro_card_05;
     background-color: #eee;
     padding: 10px 35px;
 }
-#aro_card_05:hover{
-    color: #eee;
-    background-color: black;
-}
 #aro_card_06{
     grid-area: aro_card_06;
     background-color: #eee;
     padding: 10px 35px;
-}
-#aro_card_06:hover{
-    color: #eee;
-    background-color: black;
 }
 #aro_card_07{
     grid-area: aro_card_07;
     background-color: #eee;
     padding: 10px 35px;
 }
-#aro_card_07:hover{
-    color: #eee;
-    background-color: black;
-}
 #aro_card_08{
     grid-area: aro_card_08;
     background-color: #eee;
     padding: 10px 35px;
 }
-#aro_card_08:hover{
+
+#grilla_aros_main div:hover{
     color: #eee;
     background-color: black;
 }
