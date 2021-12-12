@@ -1,0 +1,624 @@
+/* Inicio de grids y flexbox */
+.grilla_index_header{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    height: 50px;
+    width: 80%;
+    background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgba(245, 223, 182, .5));
+    position: fixed;
+} 
+
+.grilla_index_footer{
+    display: grid;
+    grid-template-areas: 
+        "text gmail wpp instagram";
+    grid-template-rows: 1fr;
+    grid-template-columns: 9fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+
+    height: 50px;
+    width: auto;
+    background-image: linear-gradient(to top, rgb(223, 176, 116), rgba(245, 223, 182, .5)) ;
+} 
+.text{
+    grid-area: text;
+}
+.gmail{
+    grid-area: gmail;
+}
+.wpp{
+    grid-area: wpp;
+}
+.instagram{
+    grid-area: instagram;
+}
+/* Fin de grids y flexbox */
+
+/* Inicio de Atributos generales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(245, 223, 182);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px auto;
+    max-width: 80%;
+}
+
+main{
+    min-height: 1000px;
+}
+
+ul{
+    list-style: none;
+    font-size: 0;
+}
+
+li{
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    font-size: 14px;
+    color: white;
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+}
+
+ul ul li{
+    display: block;
+    margin: 10px 10px;
+    padding: 5px;
+    border-top: solid 1px #eee;
+}
+
+ul li:hover ul{
+    display: block;
+    background-color: rgba(223, 177, 116, 0.37);
+    width: 200px;
+} 
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h4{
+    font-size: 18px;
+    text-align: center;
+}
+
+p{
+    font-size: 14px;
+    text-align: center;
+}
+
+footer img{
+    float: right;
+    height: 40px;
+    width: 40px;
+    padding: 2px;
+}
+/* Fin de atributos generales */
+
+/* Inicio de estilos para index.html */
+#subtitulo h4{
+    font-size: 20px;
+    margin: 0px; 
+}
+
+#link p{
+    font-size: 15px;
+    margin: 10px;
+} 
+
+#izq{
+    float: left;
+    margin: auto;
+    padding: 10px;
+}
+#izq img{
+    height: 450px;
+    width: auto;
+}
+
+#centro{
+    float: left;
+    margin: auto;
+    padding: 10px;
+}
+#centro img{
+    height: 450px;
+    width: auto;
+}
+
+#der{
+    float: left;
+    margin: auto;
+    padding: 10px;
+}
+#der img{
+    height: 450px;
+    width: auto;
+}
+
+/* GRID Y FLEXBOX */
+#grilla_index_main{
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo titulo"
+        "subtitulo subtitulo subtitulo"
+        "link link link"
+        "izq centro der";
+    grid-template-rows: .5fr .2fr .2fr .5fr;
+    grid-template-columns: 1fr 10fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#titulo{
+    grid-area: titulo;
+}
+#subtitulo{
+    grid-area: subtitulo;
+}
+#link{
+    grid-area: link;
+}
+#izq{
+    grid-area: izq;
+}
+#centro{
+    grid-area: centro;
+}
+#der{
+    grid-area: der;
+}
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para index.html */
+
+/* Inicio de estilos para categorias.html */
+#grilla_categorias_main img{
+    height: 500px;
+    width: 300px;
+}
+
+/* GRID Y FLEXBOX */
+#grilla_categorias_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias categorias aside"
+        "empty texto_aros texto_aros categorias_aros aside"
+        "empty categorias_pulseras texto_pulseras texto_pulseras aside"
+        "empty texto_anillos texto_anillos categorias_anillos aside";
+    grid-template-rows: 1fr 2fr 2fr 2fr;
+    grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+    grid-row-gap: 25px;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#texto_aros{
+    grid-area: texto_aros;
+    background-color: brown;
+    padding: 230px 250px;
+}
+#categorias_aros{
+    grid-area: categorias_aros;
+}
+#texto_pulseras{
+    grid-area: texto_pulseras;
+    background-color: green;
+    padding: 230px 250px;
+}
+#categorias_pulseras{
+    grid-area: categorias_pulseras;
+}
+#texto_anillos{
+    grid-area: texto_anillos;
+    background-color: indianred;
+    padding: 230px 250px;
+
+}
+#categorias_anillos{
+    grid-area: categorias_anillos;
+}
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para categorias.html  */
+
+/* Inicio de estilos para aros/pulseras/anillos.html */
+main img{
+    height: 250px;
+    width: 150px;
+}
+/* GRID Y FLEXBOX */
+#grilla_aros_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias categorias categorias aside"
+        "empty aro_image_01 aro_image_02 aro_image_03 aro_image_04 aside"
+        "empty aro_card_01 aro_card_02 aro_card_03 aro_card_04 aside"
+        "empty aro_image_05 aro_image_06 aro_image_07 aro_image_08 aside"
+        "empty aro_card_05 aro_card_06 aro_card_07 aro_card_08 aside";
+    grid-template-rows: 1fr 1fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#aro_image_01{
+    grid-area: aro_image_01;
+}
+#aro_image_02{
+    grid-area: aro_image_02;
+}
+#aro_image_03{
+    grid-area: aro_image_03;
+}
+#aro_image_04{
+    grid-area: aro_image_04;
+}
+#aro_image_05{
+    grid-area: aro_image_05;
+}
+#aro_image_06{
+    grid-area: aro_image_06;
+}
+#aro_image_07{
+    grid-area: aro_image_07;
+}
+#aro_image_08{
+    grid-area: aro_image_08;
+}
+#aro_card_01{
+    grid-area: aro_card_01;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_01:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_02{
+    grid-area: aro_card_02;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_02:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_03{
+    grid-area: aro_card_03;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_03:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_04{
+    grid-area: aro_card_04;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_04:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_05{
+    grid-area: aro_card_05;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_05:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_06{
+    grid-area: aro_card_06;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_06:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_07{
+    grid-area: aro_card_07;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_07:hover{
+    color: #eee;
+    background-color: black;
+}
+#aro_card_08{
+    grid-area: aro_card_08;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_08:hover{
+    color: #eee;
+    background-color: black;
+}
+
+#grilla_pulsera_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias aside"
+        "empty pulsera_image_01 pulsera_image_02 aside"
+        "empty pulsera_card_01 pulsera_card_02 aside"
+        "empty pulsera_image_03 pulsera_image_04 aside"
+        "empty pulsera_card_03 pulsera_card_04 aside";
+    grid-template-rows: 1fr 1fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#pulsera_image_01{
+    grid-area: pulsera_image_01;
+}
+#pulsera_image_02{
+    grid-area: pulsera_image_02;
+}
+#pulsera_image_03{
+    grid-area: pulsera_image_03;
+}
+#pulsera_image_04{
+    grid-area: pulsera_image_04;
+}
+#pulsera_card_01{
+    grid-area: pulsera_card_01;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_01:hover{
+    color: #eee;
+    background-color: black;
+}
+#pulsera_card_02{
+    grid-area: pulsera_card_02;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_02:hover{
+    color: #eee;
+    background-color: black;
+}
+#pulsera_card_03{
+    grid-area: pulsera_card_03;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_03:hover{
+    color: #eee;
+    background-color: black;
+}
+#pulsera_card_04{
+    grid-area: pulsera_card_04;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_04:hover{
+    color: #eee;
+    background-color: black;
+}
+
+#grilla_anillo_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias aside"
+        "empty anillo_image_01 aside"
+        "empty anillo_card_01 aside";
+    grid-template-rows: .4fr .2fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#anillo_image_01{
+    grid-area: anillo_image_01;
+}
+#anillo_card_01{
+    grid-area: anillo_card_01;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#anillo_card_01:hover{
+    color: #eee;
+    background-color: black;
+}
+
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para aros/pulseras/anillos.html */
+
+/* Inicio de estilos para contacto.html */
+#card_contacto input{
+    width: 200px;
+    padding: 2px;
+    margin: 10px;
+}
+/* GRID Y FLEXBOX */
+#grilla_contacto_main{
+    display: grid;
+    grid-template-areas: 
+        "empty contacto aside"
+        "empty intro_contacto aside"
+        "empty card_contacto aside";
+    grid-template-rows: .2fr .2fr .4fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#contacto{
+    grid-area: contacto;
+}
+#intro_contacto{
+    grid-area: intro_contacto;
+}
+#card_contacto{
+    grid-area: card_contacto;
+    background-color: #eee;
+    padding: 80px 100px;
+    border-radius: 25px;
+}
+#deco_nosotros{
+    grid-area: deco_nosotros;
+    
+}
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para contacto.html */
+
+/* Inicio de estilos para nosotros.html */
+#banner_nosotros img{
+    height: auto;
+    width: auto;
+}
+#deco_nosotros img{
+    height: auto;
+    width: 500px;
+}
+
+/* GRID Y FLEXBOX */
+#grilla_nosotros_main{
+    display: grid;
+    grid-template-areas: 
+        "empty nosotros nosotros aside"
+        "empty banner_nosotros intro_nosotros aside"
+        "empty banner_nosotros intro_nosotros aside"
+        "empty banner_nosotros deco_nosotros aside";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: .2fr 2fr 4fr .2fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 50px;
+}
+
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#nosotros{
+    grid-area: nosotros;
+}
+#intro_nosotros{
+    grid-area: intro_nosotros;
+}
+#banner_nosotros{
+    grid-area: banner_nosotros;
+    
+}
+#deco_nosotros{
+    grid-area: deco_nosotros;
+    
+}
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para nosotros.html */
+
+/* Inicio de estilos para preguntas.html */
+/* GRID Y FLEXBOX */
+#grilla_preguntas_main{
+    display: grid;
+    grid-template-areas: 
+        "empty preguntas preguntas preguntas preguntas aside"
+        "empty intro_preguntas intro_preguntas intro_preguntas intro_preguntas aside"
+        "empty preguntas_01 preguntas_02 preguntas_03 preguntas_04 aside";
+    grid-template-rows: 1fr .5fr 2fr;
+    grid-template-columns: .2fr 1fr 1fr 1fr 1fr .2fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 50px;
+}
+
+#preguntas{
+    grid-area: preguntas;
+}
+#intro_preguntas{
+    grid-area: intro_preguntas;
+}
+#preguntas_01{
+    grid-area: preguntas_01;
+    
+}
+#preguntas_02{
+    grid-area: preguntas_02;
+    
+}
+#preguntas_03{
+    grid-area: preguntas_03;
+    
+}
+#preguntas_04{
+    grid-area: preguntas_04;
+    
+} 
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para preguntas.html */
