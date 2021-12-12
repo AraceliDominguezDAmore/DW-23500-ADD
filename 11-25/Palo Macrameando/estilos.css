@@ -1,0 +1,296 @@
+/* Inicio de Atributos generales */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(245, 223, 182);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px auto;
+    width: 80%;
+}
+
+main{
+    min-height: 1200px;
+}
+
+header{
+    background: rgb(223, 176, 116);
+    height: 50px;
+    width: 80%;
+    margin: 0px;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    top: 0px
+}
+
+ul{
+    list-style: none;
+    font-size: 0;
+}
+
+li{
+    display: inline-block;
+    width: 15%;
+    position: relative;
+    font-size: 14px;
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+}
+
+ul ul li{
+    display: block;
+}
+
+ul li:hover ul{
+    display: block;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+h2{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+footer{
+    background: rgb(223, 176, 116);
+    height: 50px;
+    margin: 0px;
+    line-height: 50px;
+}
+
+footer p{
+    margin-left: 100px;
+}
+
+footer img{
+    float: right;
+    margin-top: -45px;
+    height: 40px;
+    display: inline;
+}
+
+.email{
+    margin-right: 190px;
+}
+
+.wpp{
+    margin-right: 95px;
+}
+
+.instagram{
+    margin-right: 5px;
+}
+/* Fin de atributos generales */
+
+/* Inicio de estilos para index.html */
+.encabezado h4{
+    font-size: 20px;
+    text-align: center;
+    margin: 0px; 
+}
+
+.encabezado p{
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+}
+
+.banner{
+    float: left;
+    display: inline;
+    margin: auto;
+    padding: 30px;
+}
+
+.banner img{
+    justify-content: center;
+    height: 550px;
+    margin: auto;
+}
+/* Fin de estilos para index.html */
+
+/* Inicio de estilos para categorias.html */
+.categorias{
+    display: inline;
+    margin: 0 auto;
+}
+
+.categorias img{
+    height: 250px;
+    width: 20%;
+}
+
+.categorias_recorte_aros{
+    margin: auto;
+    padding: 20px;
+    height: 250px;
+    width: 800px;
+}
+
+.categorias_recorte_aros p{
+    float: left;
+    background-color: rgb(170, 19, 39);
+    height: 250px;
+    width: 80%;
+    line-height: 250px;
+    text-align: center;
+    color: white;
+} 
+
+.categorias_recorte_pulseras{
+    margin: auto;
+    padding: 20px;
+    height: 250px;
+    width: 800px;
+}
+
+.categorias_recorte_pulseras p{
+    float: left;
+    background-color: rgb(42, 119, 23);
+    height: 250px;
+    width: 80%;
+    line-height: 250px;
+    text-align: center;
+    color: white;
+} 
+
+.categorias_recorte_anillos{
+    margin: auto;
+    padding: 20px;
+    height: 250px;
+    width: 800px;
+}
+
+.categorias_recorte_anillos p{
+    float: left;
+    background-color: rgb(128, 80, 66);
+    height: 250px;
+    width: 80%;
+    line-height: 250px;
+    text-align: center;
+    color: white;
+} 
+/* Fin de estilos para categorias.html  */
+
+/* Inicio de estilos para aros/pulseras/anillos.html */
+.productos{
+    padding: 30px;
+    margin: 50px 100px;
+}
+
+.productos img{
+    height: 300px;
+    width: 200px;
+    margin: 0px 15px;
+    border-style: double;
+}
+
+.productos_alineacion{
+    padding: 30px;
+    float: left;
+    display: inline;
+}
+
+.productos_etiqueta{
+    background-color: rgb(109, 109, 109);
+    margin-top: 0px;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    padding: 15px;
+    height: auto;
+    width: 175px;
+    text-align: center;
+    color: white;
+}
+/* Fin de estilos para aros/pulseras/anillos.html */
+
+/* Inicio de estilos para contacto.html */
+.contacto{
+    padding: 30px;
+    margin-bottom: 50px;
+    text-align: center; 
+}
+
+.contacto_cuadro{
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin: auto;
+}
+
+.contacto h4{
+    font-size: 15px;
+}
+
+.contacto p{
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.contacto label{
+    margin: 50px 0px;
+    line-height: 30px;
+}
+/* Fin de estilos para contacto.html */
+
+/* Inicio de estilos para nosotros.html */
+.nosotros{
+    margin-top: 15px;
+    display: inline;
+}
+
+.nosotros_banner{
+    margin: -400px 0px;
+    width: 250px;
+    height: 500px;
+}
+
+.nosotros_decoracion{
+    margin: 400px 600px;
+}
+
+.nosotros p{
+    background-color: rgb(245, 223, 182);
+    height: 100px;
+    width: 1000px;
+    font-size: 25px;
+    margin: 300px 0px 0px 500px;
+    text-align: center;
+    line-height: auto;
+}
+/* Fin de estilos para nosotros.html */
+
+/* Inicio de estilos para preguntas.html */
+.preguntas p{
+    text-align: center;
+}
+.preguntas_article{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 0px 200px;
+    border-bottom: 1px solid rgb(109, 109, 109);
+}
+
+.preguntas_article h4{
+    font-size: 20px;
+}
+
+.preguntas_article p{
+    font-size: 15px;
+    margin: 20px 0px;
+}
+/* Fin de estilos para preguntas.html */
