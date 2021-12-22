@@ -1,15 +1,4 @@
 /* Inicio de grids y flexbox */
-.grilla_index_header{
-    display: grid;
-    align-items: center;
-    text-align: center;
-    margin: 0px;
-    height: 50px;
-    width: 80%;
-    background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgba(245, 223, 182, .5));
-    position: fixed;
-} 
-
 .grilla_index_footer{
     display: grid;
     grid-template-areas: 
@@ -18,7 +7,6 @@
     grid-template-columns: 9fr 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-
     height: 50px;
     width: auto;
     background-image: linear-gradient(to top, rgb(223, 176, 116), rgba(245, 223, 182, .5)) ;
@@ -39,222 +27,145 @@
 
 /* Inicio de Atributos generales */
 *{
+    background-color: rgb(245, 223, 182);
     margin: 0px;
     padding: 0px;
-}
-
-body{
-    background-color: rgb(245, 223, 182);
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px auto;
-    max-width: 80%;
-}
-
-main{
-    min-height: 1000px;
-}
-
-ul{
+    text-decoration: none;
     list-style: none;
-    font-size: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-li{
-    display: inline-block;
-    width: 15%;
-    position: relative;
-    font-size: 14px;
-    color: white;
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgba(245, 223, 182, .5))
 }
-
+.bar-btn{
+    font-size: 25px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(245, 223, 182, 0.95);
+    text-align: center;
+    transition: all .5s;
+}
+.nav-menu li{
+    background-color: rgba(245, 223, 182, 0);
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+.nav-menu li a{
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-menu li a:hover{
+    color: rgb(223, 176, 116);
+    transition: .3s;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li{
+    display: block;
+}
 ul ul{
     position: absolute;
     display: none;
 }
-
 ul ul li{
     display: block;
-    margin: 10px 10px;
-    padding: 5px;
-    border-top: solid 1px #eee;
 }
-
-ul li:hover ul{
-    display: block;
-    background-color: rgba(223, 177, 116, 0.37);
-    width: 200px;
-} 
-
-h1{
-    font-size: 100px;
-    text-align: center;
-    margin-top: 100px;
-}
-
-h2{
-    font-size: 50px;
-    text-align: center;
-    margin-top: 100px;
-}
-
-h4{
-    font-size: 18px;
-    text-align: center;
-}
-
 p{
     font-size: 14px;
     text-align: center;
 }
-
 footer img{
     float: right;
     height: 40px;
     width: 40px;
     padding: 2px;
 }
+main{
+    min-height: 1300px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px){
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgba(245, 223, 182, .5)); 
+        transition: none;
+        text-align: center;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .nav-menu li a{
+        font-size: 12px;
+        margin: 0%;
+        padding: 0%;
+    }
+    ul ul{
+        position: absolute;
+        display: none;
+    }
+    
+    ul ul li{
+        display: block;
+        justify-items: center;
+    }
+    
+    ul li:hover ul{
+        display: block;
+        background-color: rgba(223, 177, 116, 0.37);
+        width: 150px;
+    } 
+}
+
 /* Fin de atributos generales */
 
 /* Inicio de estilos para index.html */
-#subtitulo h4{
-    font-size: 20px;
-    margin: 0px; 
+@media screen and (max-width: 768px){
+    main{
+        min-height: 800px;
+    }
 }
-
-#link p{
-    font-size: 15px;
-    margin: 10px;
-} 
-
-#izq{
-    float: left;
-    margin: auto;
-    padding: 10px;
-}
-#izq img{
-    height: 450px;
-    width: auto;
-}
-
-#centro{
-    float: left;
-    margin: auto;
-    padding: 10px;
-}
-#centro img{
-    height: 450px;
-    width: auto;
-}
-
-#der{
-    float: left;
-    margin: auto;
-    padding: 10px;
-}
-#der img{
-    height: 450px;
-    width: auto;
-}
-
-/* GRID Y FLEXBOX */
-#grilla_index_main{
-    display: grid;
-    grid-template-areas: 
-        "titulo titulo titulo"
-        "subtitulo subtitulo subtitulo"
-        "link link link"
-        "izq centro der";
-    grid-template-rows: .5fr .2fr .2fr .5fr;
-    grid-template-columns: 1fr 10fr 1fr;
-    justify-items: center;
-    align-items: center;
-}
-
-#titulo{
-    grid-area: titulo;
-}
-#subtitulo{
-    grid-area: subtitulo;
-}
-#link{
-    grid-area: link;
-}
-#izq{
-    grid-area: izq;
-}
-#centro{
-    grid-area: centro;
-}
-#der{
-    grid-area: der;
-}
-/* Fin GRID Y FLEXBOX */
 /* Fin de estilos para index.html */
 
-/* Inicio de estilos para categorias.html */
-#grilla_categorias_main img{
-    height: 500px;
-    width: 300px;
-}
-
-/* GRID Y FLEXBOX */
-#grilla_categorias_main{
-    display: grid;
-    grid-template-areas: 
-        "empty categorias categorias categorias aside"
-        "empty texto_aros texto_aros categorias_aros aside"
-        "empty categorias_pulseras texto_pulseras texto_pulseras aside"
-        "empty texto_anillos texto_anillos categorias_anillos aside";
-    grid-template-rows: 1fr 2fr 2fr 2fr;
-    grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
-    grid-row-gap: 25px;
-    align-content: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#categorias{
-    grid-area: categorias;
-}
-#aside{
-    grid-area: aside;
-}
-#empty{
-    grid-area: empty;
-}
-#texto_aros{
-    grid-area: texto_aros;
-    background-color: brown;
-    padding: 230px 250px;
-}
-#categorias_aros{
-    grid-area: categorias_aros;
-}
-#texto_pulseras{
-    grid-area: texto_pulseras;
-    background-color: green;
-    padding: 230px 250px;
-}
-#categorias_pulseras{
-    grid-area: categorias_pulseras;
-}
-#texto_anillos{
-    grid-area: texto_anillos;
-    background-color: indianred;
-    padding: 230px 250px;
-
-}
-#categorias_anillos{
-    grid-area: categorias_anillos;
-}
-/* Fin GRID Y FLEXBOX */
-/* Fin de estilos para categorias.html  */
+/* HASTA ACA SEGUNDA ENTREGA DEL PROYECTO FINAL */
 
 /* Inicio de estilos para aros/pulseras/anillos.html */
-main img{
-    height: 250px;
-    width: 150px;
-}
+
 /* GRID Y FLEXBOX */
 #grilla_aros_main{
     display: grid;
@@ -345,10 +256,10 @@ main img{
     background-color: #eee;
     padding: 10px 35px;
 }
-
 #grilla_aros_main div:hover{
     color: #eee;
     background-color: black;
+    padding: 10px 35px;
 }
 
 #grilla_pulsera_main{
