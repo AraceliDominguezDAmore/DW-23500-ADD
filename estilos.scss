@@ -1,0 +1,388 @@
+/* estilos globales */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+p{
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+}
+body{
+    background-color: rgb(245, 223, 182);
+}
+main{
+    min-height: 1300px;
+    background-color: rgb(255, 222, 180);    
+}
+/* fin de estilos globales */
+
+/* estilos de header */
+header{
+    margin: 0;
+    padding: 0; 
+    background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgb(255, 222, 180));
+}
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.bar-btn{
+    font-size: 25px;
+    color: black;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    text-align: center;
+    transition: all .5s;
+    background-color: rgb(255, 223, 180);
+    li{
+        display: none;
+        line-height: 30px;
+        margin: 50px 0;
+        transition: all .5s;
+        a{
+            color: black;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: 600;
+            &:hover{
+                color: rgb(223, 176, 116);
+                transition: .3s;
+            }
+        }
+    }
+}
+
+#check{
+    display: none;
+    &:checked ~ .nav-menu{
+        height: auto;
+        li{
+            display: block;
+        }
+    }
+}
+
+ul ul{
+    position: absolute;
+    display: none;
+    li{
+        display: block;
+    }
+}
+
+/* header resposive */
+@media screen and (min-width: 768px){
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+        visibility: hidden;
+        i{
+            display: none;
+            visibility: hidden;
+        }
+    }
+    #check{
+        display: none;
+        visibility: hidden;
+    }
+    .nav-menu{
+        position: relative;
+        height: 120px;
+        width: 100%;
+        top: 0;
+        background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgb(255, 222, 180)); 
+        transition: none;
+        text-align: center;
+        li{
+            display: inline-block;
+            line-height: 100px;
+            margin: 0 20px;
+            transition: none;
+            a{
+                font-size: 12px;
+                margin: 0%;
+                padding: 0%;
+            }
+        }
+    }
+    ul ul{
+        position: absolute;
+        display: none;
+        li{
+            display: block;
+            justify-items: center;
+        }
+    }
+    ul li:hover ul{
+        display: block;
+        background-color: rgba(223, 177, 116, 0.37);
+        width: 150px;
+    } 
+}
+/* fin de estilos de header */
+/* estilos de footer */
+footer{
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    background-image: linear-gradient(to top, rgb(223, 176, 116), rgb(255, 222, 180));
+    img{
+        height: 40px;
+        width: 40px;
+    }
+}
+/* fin de estilos de footer */
+/* index.html responsive complementario */
+@media screen and (max-width: 768px){
+    main{
+        min-height: 800px;
+    }
+}
+/* fin de index.html */
+/* estilos aros.html */
+#grilla_aros_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias categorias categorias aside"
+        "empty aro_image_01 aro_image_02 aro_image_03 aro_image_04 aside"
+        "empty aro_card_01 aro_card_02 aro_card_03 aro_card_04 aside"
+        "empty aro_image_05 aro_image_06 aro_image_07 aro_image_08 aside"
+        "empty aro_card_05 aro_card_06 aro_card_07 aro_card_08 aside";
+    grid-template-rows: .5fr .8fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+    div:hover{
+        color: #eee;
+        background-color: black;
+        padding: 10px 35px;
+    }
+}
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+
+//MAP aros
+$aro-card:(
+    01: aro_card_01,
+    02: aro_card_02, 
+    03: aro_card_03, 
+    04: aro_card_04, 
+    05: aro_card_05,
+    06: aro_card_06, 
+    07: aro_card_07, 
+    08: aro_card_08,
+);
+@each $card, $grid in $aro-card{
+    #aro_card_0#{$card} {
+        grid-area: $grid;
+        background-color: #eee;
+        padding: 10px 35px;
+    }
+}
+$aro-image:(
+    01: aro_image_01,
+    02: aro_image_02, 
+    03: aro_image_03, 
+    04: aro_image_04, 
+    05: aro_image_05,
+    06: aro_image_06, 
+    07: aro_image_07, 
+    08: aro_image_08,
+);
+@each $image, $grid in $aro-image{
+    #aro_image_0#{$image} {
+        grid-area: $grid;
+    }
+}
+/* fin de estilos aros.html */
+/* estilos pulseras.html */
+#grilla_pulsera_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias aside"
+        "empty pulsera_image_01 pulsera_image_02 aside"
+        "empty pulsera_card_01 pulsera_card_02 aside"
+        "empty pulsera_image_03 pulsera_image_04 aside"
+        "empty pulsera_card_03 pulsera_card_04 aside";
+    grid-template-rows: .5fr .8fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+    div:hover{
+        color: #eee;
+        background-color: black;
+        padding: 10px 35px;
+    }
+}
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+
+//MAP pulseras
+$pulsera-card:(
+    01: pulsera_card_01,
+    02: pulsera_card_02, 
+    03: pulsera_card_03, 
+    04: pulsera_card_04, 
+);
+@each $card, $grid in $pulsera-card{
+    #pulsera_card_0#{$card} {
+        grid-area: $grid;
+        background-color: #eee;
+        padding: 10px 35px;
+    }
+}
+$pulsera-image:(
+    01: pulsera_image_01,
+    02: pulsera_image_02, 
+    03: pulsera_image_03, 
+    04: pulsera_image_04, 
+);
+@each $image, $grid in $pulsera-image{
+    #pulsera_image_0#{$image} {
+        grid-area: $grid;
+    }
+}
+/* fin de estilos pulseras.html */
+/* estilos anillos.html */
+#grilla_anillo_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias aside"
+        "empty anillo_image_01 aside"
+        "empty anillo_card_01 aside";
+    grid-template-rows: .4fr .2fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+    div:hover{
+        color: #eee;
+        background-color: black;
+        padding: 10px 35px;
+    }
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+
+//MAP anillo
+$anillo-card:(
+    01: anillo_card_01,
+);
+@each $card, $grid in $anillo-card{
+    #anillo_card_0#{$card} {
+        grid-area: $grid;
+        background-color: #eee;
+        padding: 10px 35px;
+    }
+}
+$anillo-image:(
+    01: anillo_image_01,
+);
+@each $image, $grid in $anillo-image{
+    #anillo_image_0#{$image} {
+        grid-area: $grid;
+    }
+}
+/* fin de estilos anillos.html */ 
+/* estilos contacto.html */
+.card_contacto{
+    background-color: #eee;
+    height: 28rem;
+    padding: 80px 100px;
+    border-radius: 25px;
+    input{
+        width: 25rem;
+        padding: 5px;
+        margin: 15px 0px;
+        background-color: wheat;
+    }
+}
+/* fin de estilos contacto.html */
+/* estilos nosotros.html */
+#grilla_nosotros_main{
+    display: grid;
+    grid-template-areas: 
+        "banner_nosotros intro_nosotros aside"
+        "banner_nosotros intro_nosotros aside"
+        "banner_nosotros deco_nosotros aside";
+    grid-template-rows: 1fr .5fr 1fr;
+    grid-template-columns: 2fr 4fr .5fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 20px;
+}
+#aside{
+    grid-area: aside;
+}
+#nosotros{
+    grid-area: nosotros;
+}
+#intro_nosotros{
+    grid-area: intro_nosotros;
+}
+#banner_nosotros{
+    grid-area: banner_nosotros;
+    img{
+        height: auto;
+        width: 15rem;
+    }
+}
+#deco_nosotros{
+    grid-area: deco_nosotros;
+    img{
+        height: auto;
+        width: 30rem;
+    }
+}
+/* fin de estilos nosotros.html */
